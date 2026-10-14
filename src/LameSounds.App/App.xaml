@@ -1,0 +1,26 @@
+<Application x:Class="LameSounds.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LameSounds.App"
+             xmlns:conv="clr-namespace:LameSounds.App.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Theme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <conv:HexToBrushConverter x:Key="HexToBrushConv" />
+            <conv:BoolToVisibilityConverter x:Key="BoolToVisConv" />
+            <conv:BoolToVisibilityConverter x:Key="InverseBoolToVisConv" Invert="True" />
+            <conv:EmptySlotToVisibilityConverter x:Key="EmptySlotToVisConv" />
+            <conv:EmptySlotToVisibilityConverter x:Key="InverseEmptySlotToVisConv" Invert="True" />
+            <conv:ShapeToCornerRadiusConverter x:Key="ShapeToCornerRadiusConv" />
+            <conv:IsHexagonVisibilityConverter x:Key="IsHexagonVisConv" />
+            <conv:SoundClipToBrushConverter x:Key="SoundClipToBrushConv" />
+            <conv:NullOrEmptyToVisibilityConverter x:Key="NullOrEmptyToVisConv" />
+            <conv:EmptyCountToVisibilityConverter x:Key="EmptyCountToVisConv" />
+            <conv:EmptyCountToVisibilityConverter x:Key="InverseEmptyCountToVisConv" Invert="True" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
