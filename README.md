@@ -1,4 +1,4 @@
-# 🎙️ LameSounds
+# LameSounds
 
 <p align="center">
   <img src="src/LameSounds.App/Resources/app_logo.png" alt="LameSounds Logo" width="130" height="130" />
@@ -13,36 +13,36 @@
   <a href="#architecture"><img src="https://img.shields.io/badge/.NET-9.0%20WPF-512BD4?style=for-the-badge&logo=dotnet" alt=".NET 9" /></a>
   <a href="#android-mobile-deck"><img src="https://img.shields.io/badge/Kotlin-2.0%20%7C%20Compose-7F52FF?style=for-the-badge&logo=kotlin" alt="Kotlin" /></a>
   <a href="#audio-engine"><img src="https://img.shields.io/badge/Audio-WASAPI%20Shared-009688?style=for-the-badge" alt="Audio Engine" /></a>
-  <a href="#networking--discovery"><img src="https://img.shields.io/badge/Latency-%3C%202ms%20UDP-FF5722?style=for-the-badge" alt="Latency" /></a>
+  <a href="#networking--wireless-pairing"><img src="https://img.shields.io/badge/Latency-%3C%202ms%20UDP-FF5722?style=for-the-badge" alt="Latency" /></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge" alt="License" /></a>
 </p>
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Architecture & Tech Stack](#-architecture--tech-stack)
-- [Networking & Wireless Pairing](#-networking--wireless-pairing)
-- [System Requirements & Prerequisites](#-system-requirements--prerequisites)
-- [Installation Guide](#-installation-guide)
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Architecture & Tech Stack](#architecture--tech-stack)
+- [Networking & Wireless Pairing](#networking--wireless-pairing)
+- [System Requirements & Prerequisites](#system-requirements--prerequisites)
+- [Installation Guide](#installation-guide)
   - [Windows Desktop Application](#windows-desktop-application)
   - [Virtual Audio Cable Setup (Discord / Games / OBS)](#virtual-audio-cable-setup-discord--games--obs)
   - [Android Companion App](#android-companion-app)
-- [User Guide & Workflows](#-user-guide--workflows)
+- [User Guide & Workflows](#user-guide--workflows)
   - [Audio Mixer & Dual Routing](#1-audio-mixer--dual-routing)
   - [Organizing Sound Sets & Drag-and-Drop](#2-organizing-sound-sets--drag-and-drop)
   - [Importing & Managing Audio](#3-importing--managing-audio)
   - [Wireless Pairing Options](#4-wireless-pairing-options)
-- [Configuration & Data Storage](#-configuration--data-storage)
-- [Troubleshooting & FAQ](#-troubleshooting--faq)
-- [Contributing & Development](#-contributing--development)
-- [License](#-license)
+- [Configuration & Data Storage](#configuration--data-storage)
+- [Troubleshooting & FAQ](#troubleshooting--faq)
+- [Contributing & Development](#contributing--development)
+- [License](#license)
 
 ---
 
-## 🌟 Overview
+## Overview
 
 **LameSounds** is an ultra-low latency, hardware-accelerated soundboard designed for competitive gamers, streamers, and podcasters. It provides a dual-interface experience:
 
@@ -51,15 +51,15 @@
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🎧 Pro-Grade Audio Pipeline
+### Pro-Grade Audio Pipeline
 - **Dual-Bus Audio Engine**: Simultaneously outputs audio to your **Monitor** (Headphones/Speakers) and a **Broadcast** endpoint (VB-Audio Virtual Cable, VoiceMeeter, or VAC).
 - **WASAPI Shared Mode with Auto-Resampling**: Native Windows Audio Session API running at 48,000 Hz 32-bit IEEE float. Automatically handles sample-rate conversion (via WDL resampler) and multi-channel channel mapping (mono, stereo, 5.1/7.1 surround).
 - **In-Memory Zero-Latency Cache**: Audio clips are pre-decoded into memory buffers, eliminating mechanical disk spin-up and file read delays during high-stakes gaming moments.
 - **Smart Mic Passthrough & Auto-Ducking**: Streams your microphone directly into your virtual broadcast cable while automatically ducking your voice whenever soundboard effects are triggered.
 
-### 📱 Android Mobile Companion Deck
+### Android Mobile Companion Deck
 - **Zero-Config Wireless Discovery**: Instantly discovers the PC application using multi-subnet UDP discovery beacons, broadcast probing, Windows Mobile Hotspot gateway auto-detection, and QR code visual pairing.
 - **Ultra-Fast UDP Triggering**: Triggers audio in less than 2 milliseconds over UDP datagrams with seamless HTTP fallback for isolated or restricted networks.
 - **Interactive Drag-and-Drop Reordering**: Long-press any sound button to lift and drag it into new grid slots with spring physics and smooth grid animations.
@@ -68,7 +68,7 @@
 
 ---
 
-## 🏛️ Architecture & Tech Stack
+## Architecture & Tech Stack
 
 ```mermaid
 flowchart TB
@@ -130,7 +130,7 @@ flowchart TB
 
 ---
 
-## 🌐 Networking & Wireless Pairing
+## Networking & Wireless Pairing
 
 LameSounds uses standard, lightweight networking protocols designed to work without administrator privileges or Windows URLACL permissions:
 
@@ -150,7 +150,7 @@ The Android app resolves the desktop server using a 5-step fallback strategy:
 
 ---
 
-## 💻 System Requirements & Prerequisites
+## System Requirements & Prerequisites
 
 ### Windows PC
 - **OS**: Windows 10 (version 1809+) or Windows 11 (64-bit recommended).
@@ -163,14 +163,14 @@ The Android app resolves the desktop server using a 5-step fallback strategy:
 
 ---
 
-## 🚀 Installation Guide
+## Installation Guide
 
 ### Windows Desktop Application
 
 #### Option A: Run Pre-Built Executable (Fastest)
 1. Clone or download the repository:
    ```cmd
-   git clone https://github.com/your-username/lame-sounds.git
+   git clone https://github.com/vanshtyagi001/lame-sounds.git
    cd lame-sounds
    ```
 2. Double-click **`run.bat`** in the project root.
@@ -243,7 +243,7 @@ The compiled APK will be located at:
 
 ---
 
-## 🎮 User Guide & Workflows
+## User Guide & Workflows
 
 ### 1. Audio Mixer & Dual Routing
 
@@ -299,7 +299,7 @@ If using strict corporate or university Wi-Fi with client isolation:
 
 ---
 
-## 📂 Configuration & Data Storage
+## Configuration & Data Storage
 
 All user configurations, sound metadata, and audio files are persisted locally in Windows standard application storage:
 
@@ -314,7 +314,7 @@ All user configurations, sound metadata, and audio files are persisted locally i
 
 ---
 
-## ❓ Troubleshooting & FAQ
+## Troubleshooting & FAQ
 
 ### Audio plays in Discord, but I can't hear it in my headphones
 > **Solution**: Open the **Audio Mixer** tab in the desktop application. Ensure **Monitor Device** is set to your physical headphones/speakers (e.g. *Realtek Audio* or *USB Headset*) and verify that the **Monitor Volume** slider is not at 0%.
@@ -333,7 +333,7 @@ All user configurations, sound metadata, and audio files are persisted locally i
 
 ---
 
-## 🛠️ Contributing & Development
+## Contributing & Development
 
 Contributions are welcome! Please follow these guidelines:
 
@@ -347,12 +347,12 @@ Contributions are welcome! Please follow these guidelines:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <p align="center">
-  Built with ❤️ for gamers, streamers, and audio enthusiasts.
+  Built for gamers, streamers, and audio enthusiasts.
 </p>
