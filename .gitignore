@@ -1,0 +1,106 @@
+# ==============================================================================
+# LameSounds - Comprehensive .gitignore
+# Covers .NET 9 (WPF / C#), Android (Kotlin / Gradle), Visual Studio, & OS files
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. .NET & Visual Studio Build Artifacts
+# ------------------------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+publish/
+dist/
+
+# Visual Studio temporary files & caches
+.vs/
+*.user
+*.userprefs
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code & Rider
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.DotSettings.user
+*.suo
+
+# Build & Test outputs
+[Tt]est[Rr]esult*/
+TestResults/
+*.binlog
+*.log
+
+# Roslyn & NuGet
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ------------------------------------------------------------------------------
+# 2. Android & Gradle Build Artifacts
+# ------------------------------------------------------------------------------
+.gradle/
+.kotlin/
+build/
+*/build/
+app/build/
+
+# Local Android SDK configuration (contains machine-specific SDK paths)
+local.properties
+
+# Android Profiling & Memory Dumps
+*.hprof
+java_pid*.hprof
+captures/
+.cxx/
+.externalNativeBuild/
+
+# Android Studio / IntelliJ project files
+*.iml
+*.ipr
+*.iws
+
+# Package & Signing outputs
+*.apk
+*.ap_
+*.aab
+output-metadata.json
+*.keystore
+*.jks
+
+# ------------------------------------------------------------------------------
+# 3. Operating System Files
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+*.swp
+*.swo
+
+# ------------------------------------------------------------------------------
+# 4. Local User & Scratch Files
+# ------------------------------------------------------------------------------
+crash.log
+*.tmp
+*.bak
